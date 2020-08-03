@@ -181,4 +181,5 @@ btn.onclick = hi = (e) => {
 	console.log(e.target.id)
 	// this for window
 	console.log(this)
+	
 }
