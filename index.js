@@ -68,6 +68,7 @@ for (const property in i) {
 
 let arr = [],x=0
 //val it is array containe property + value of
+//usinf of in for beacuase Object.entries(i) is iterabol
 for(let val of Object.entries(i)){
    arr[x] = val
    x++
