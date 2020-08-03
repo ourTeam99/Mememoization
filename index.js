@@ -230,3 +230,64 @@ let btn = document.getElementById("issa")
 
 // mousedown because exist event blur and it is power more the mouse click 
 btn.addEventListener("mousedown" , test)
+
+//exmple 14 
+let x = 12 ;
+
+//async 
+let myPromise = new Promise( (res,err) => {
+	setTimeout(() => {
+		console.log("hello")
+		if(x == 1)
+		res('done')
+			else
+			err('not done')
+	})
+})
+
+// call my promise
+myPromise.then((msg) => {
+	console.log("msg1")
+}).then((msg) => {
+	console.log("msg2")
+}).catch((err) => {
+	console.log(err)
+})
+
+
+//exmple 15
+let myPromise = fetch("https://jsonplaceholder.typicode.com/todos/1");
+let data = {}
+
+async function myF() {
+  // excute my promise
+  let data = await myPromise;
+  // return body data
+  return data.json();
+}
+
+// excute async function
+myF()
+  .then((data) => {
+	  this.data = data
+	console.log(data);
+	this.data.hasOwnProperty('userId') ? console.log(data.userId) : console.log("no data found") 
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+//exmple 16
+let myObject = {issa:"123"}
+	
+// trasform to string to send HTTP request 
+let myJSON = JSON.stringify(myObject)
+
+console.log(myJSON)
+
+//exmple 17
+let issa = '{"issa" : "123"}'
+// change string to object
+let myObject = JSON.parse(issa)
+
+console.log(myObject)
