@@ -35,6 +35,7 @@ let c = new a(1,3)
 console.log(c)
 
 
+//exmple 3
 //create Object 
 let c = {}
 console.log(c)
@@ -42,7 +43,7 @@ console.log(c)
 let c = new Object()
 console.log(c)
 
-
+//exmple 4
 //extends object a
 let a = {
 	x : 1,
@@ -54,7 +55,7 @@ let b = Object.create(a)
 console.log(b.__proto__)
 
 
-
+//exmple 5
 let i = {
     x :1,
     y:2,
@@ -75,3 +76,28 @@ for(let val of Object.entries(i)){
 }
 
 console.log(arr)
+
+//exmple 6
+function* issa(nb){
+	for (var i = 0; i < nb ; i++) {
+		//ceate iterator for next value
+		yield i
+		// make done == true and that means all of value comme next are undefined
+		if(i == 5)
+			return i
+	}
+}
+
+let x = issa(10)
+
+console.log(x.next())
+console.log(x.next())
+console.log(x.next())
+console.log(x.next())
+console.log(x.next())
+console.log(x.next())
+console.log(x.next())
+console.log(x.next())
+console.log(x.next())
+console.log(x.next())
+console.log(x.next())
