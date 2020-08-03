@@ -101,3 +101,56 @@ console.log(x.next())
 console.log(x.next())
 console.log(x.next())
 console.log(x.next())
+
+//exmple 7
+let arr = Array(5)
+
+let a = {
+	name : "issa",
+	age : 21
+}
+let b = {
+	name : "sami",
+	age : 22
+}
+
+let c = {
+	name : "koko",
+	age : 11
+}
+
+let d = {
+	name : "sasa",
+	age : 33
+}
+
+let e = {
+	name : "dada",
+	age : 43
+}
+
+let f = {
+	name : "eded",
+	age : 32
+}
+
+arr[0] = a
+arr[1] = b
+arr[2] = c
+arr[3] = d
+arr[4] = e
+
+console.log(arr)
+
+function* generator(arr) {
+	for (var i = 0; i < arr.length; i++) {
+		yield arr[i]
+	}
+}
+
+let counter = generator(arr)
+
+for (var i = 0; i < arr.length; i++) {
+	let value = counter.next().value
+	console.log(value)
+}
