@@ -154,3 +154,31 @@ for (var i = 0; i < arr.length; i++) {
 	let value = counter.next().value
 	console.log(value)
 }
+
+//exmple 8
+// event is a fix word 
+<button id="issa" onclick="hi(event)"> cliekc me !</button>
+
+// this is for windows
+function hi(e) {
+	// target is who call her
+	console.log(e.target.id)
+}
+
+//exmple 9
+
+<button id="issa"> cliekc me !</button>
+
+let btn = document.getElementById("issa")
+// this for html object
+btn.onclick = function hi() {
+	console.log(this.id)
+}
+
+//exmple 10
+let btn = document.getElementById("issa")
+btn.onclick = hi = (e) => {
+	console.log(e.target.id)
+	// this for window
+	console.log(this)
+}
