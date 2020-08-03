@@ -52,3 +52,25 @@ let a = {
 let b = Object.create(a)
 
 console.log(b.__proto__)
+
+
+
+let i = {
+    x :1,
+    y:2,
+    z:3
+}
+
+//property it is the x,y,z,.....
+for (const property in i) {
+ console.log(`${property}: ${i[property]}`);
+}
+
+let arr = [],x=0
+//val it is array containe property + value of
+for(let val of Object.entries(i)){
+   arr[x] = val
+   x++
+}
+
+console.log(arr)
