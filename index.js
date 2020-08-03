@@ -33,3 +33,22 @@ console.log(this.x)
 let c = new a(1,3)
 
 console.log(c)
+
+
+//create Object 
+let c = {}
+console.log(c)
+
+let c = new Object()
+console.log(c)
+
+
+//extends object a
+let a = {
+	x : 1,
+	y : 2
+}
+
+let b = Object.create(a)
+
+console.log(b.__proto__)
