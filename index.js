@@ -181,5 +181,52 @@ btn.onclick = hi = (e) => {
 	console.log(e.target.id)
 	// this for window
 	console.log(this)
-	
+
 }
+
+//exmple 11
+function test() {
+	console.log(a.x)
+}
+
+let a  = {
+	x : 1,
+	name : "issa"
+}
+// change this from window to object a
+test.call(a)
+
+//exmple 12
+
+<button id="issa" > cliekc me !</button>
+
+function test() {
+	// this return button
+	console.log(this)
+}
+
+
+let btn = document.getElementById("issa")
+
+btn.addEventListener("click" , test)
+
+//exemple 13 
+function test(e) {
+	// if id fauls make a catch error
+	try{
+	let name = document.getElementById("input1").value
+	// if true
+	if(name === "" || name === null) throw new Error("null || empty")
+		else
+	console.log(name)
+	}catch(err){
+		console.log(err)
+	}
+
+}
+
+
+let btn = document.getElementById("issa")
+
+// mousedown because exist event blur and it is power more the mouse click 
+btn.addEventListener("mousedown" , test)
